@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update Students Informations</h2>
+
+@model SchoolWebApp.Models.Student
+
+@using (Html.BeginForm("Update", "Student", FormMethod.Post))
+{
+    <label>ID</label>
+    <br />
+    <input type="text" value="@Model.ID" name="ID" readonly />
+    <br />
+    <label>FirstName</label>
+    <br />
+    <input type="text" value="@Model.FirstName" name="FirstName" />
+    <br />
+    <label>LastName</label>
+    <br />
+    <input type="text" value="@Model.LastName" name="LastName" />
+    <br />
+    <label>Address</label>
+    <br />
+    <input type="text" value="@Model.Address" name="Address" />
+    <br />
+    <br />
+    <input type="submit" value="modify" />
+
+}
+
+

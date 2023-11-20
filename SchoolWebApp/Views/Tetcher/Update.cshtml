@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update Tetcher Information</h2>
+
+
+@model SchoolWebApp.Models.Tetcher
+
+@using (Html.BeginForm("Update", "Tetcher", FormMethod.Post))
+{
+    <label>ID</label>
+    <br />
+    <input type="text" value="@Model.ID" name="ID" readonly />
+    <br />
+    <label>TetcherName</label>
+    <br />
+    <input type="text" value="@Model.TetcherName" name="TetcherName" />
+    <br />
+    <label>Major</label>
+    <br />
+    <input type="text" value="@Model.Major" name="Major" />
+    <br />
+    <br />
+    <input type="submit" value="modify" />
+
+}

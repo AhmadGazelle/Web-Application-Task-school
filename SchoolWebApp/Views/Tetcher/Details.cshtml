@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Tetchers Details</h2>
+
+
+
+@model SchoolWebApp.Models.Tetcher
+
+<label>TetcherName</label>
+<br />
+<input type="text" value="@Model.TetcherName" name="TetcherName" disabled />
+<br />
+<label>Major</label>
+<br />
+<input type="text" value="@Model.Major" name="Major" disabled />
+<br />
+<br />
+<a href="https://localhost:44340/Tetcher/Index">Back To List </a>
+

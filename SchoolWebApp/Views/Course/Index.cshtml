@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Courses Informations</h2>
+
+
+@model List<SchoolWebApp.Models.Course>
+<head>
+    <style>
+        td {
+            text-align: center;
+            padding: 8px;
+            background-color: #f2f2f2;
+        }
+
+        th {
+            text-align: center;
+            padding: 8px;
+            background-color: #f2f2f2;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+<table>
+    <thead>
+        <tr>
+            <th>ID </th>
+            <th>CourseName </th>
+            <th>CourseNumber </th>         
+            <th>Delete </th>
+            <th>Details </th>
+            <th>Update </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var Courses in Model)
+        {
+            <tr>
+                <td>@Courses.ID</td>
+                <td>@Courses.CourseName</td>
+                <td>@Courses.CourseNumber</td>
+                <td><a href="/Course/Delete/@Courses.ID"> Delete </a></td>
+                <td><a href="/Course/Details/@Courses.ID"> Details </a></td>
+                <td><a href="/Course/Update/@Courses.ID"> Update </a></td>
+            </tr>
+
+        }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Students Details</h2>
+
+
+
+@model SchoolWebApp.Models.Student
+
+<label>FirstName</label>
+<br />
+<input type="text" value="@Model.FirstName" name="FirstName" disabled />
+<br />
+<label>LastName</label>
+<br />
+<input type="text" value="@Model.LastName" name="LastName" disabled />
+<br />
+<label>Address</label>
+<br />
+<input type="text" value="@Model.Address" name="Address" disabled />
+<br />
+<br />
+<a href="https://localhost:44340/Student/Index">Back To List </a>
+

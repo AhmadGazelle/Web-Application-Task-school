@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add New Course</h2>
+
+
+
+@using (Html.BeginForm("Create", "Course", FormMethod.Post))
+{
+<label for="fname">CourseName</label>
+    <br>
+    <input type="text" name="CourseName">
+    <br>
+    <label for="lname">CourseNumber:</label>
+    <br>
+    <input type="text" name="CourseNumber">
+    <br>
+    <br />
+    <input type="submit" value="Add new Course">
+
+
+}

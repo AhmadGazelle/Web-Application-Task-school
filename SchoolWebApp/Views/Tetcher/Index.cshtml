@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tetchers Informations</h2>
+
+
+@model List<SchoolWebApp.Models.Tetcher>
+<head>
+    <style>
+        td {
+            text-align: center;
+            padding: 8px;
+            background-color: #f2f2f2;
+        }
+
+        th {
+            text-align: center;
+            padding: 8px;
+            background-color: #f2f2f2;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+<table>
+    <thead>
+        <tr>
+            <th>ID </th>
+            <th>TetcherName </th>
+            <th>Major </th>
+            <th>Delete </th>
+            <th>Details </th>
+            <th>Update </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var Tetcher in Model)
+        {
+            <tr>
+                <td>@Tetcher.ID</td>
+                <td>@Tetcher.TetcherName</td>
+                <td>@Tetcher.Major</td>
+                <td><a href="/Tetcher/Delete/@Tetcher.ID"> Delete </a></td>
+                <td><a href="/Tetcher/Details/@Tetcher.ID"> Details </a></td>
+                <td><a href="/Tetcher/Update/@Tetcher.ID"> Update </a></td>
+            </tr>
+
+        }
+    </tbody>
+</table>

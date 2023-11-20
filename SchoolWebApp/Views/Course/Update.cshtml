@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update Course Information</h2>
+
+@model SchoolWebApp.Models.Course
+
+@using (Html.BeginForm("Update", "Course", FormMethod.Post))
+{
+    <label>ID</label>
+    <br />
+    <input type="text" value="@Model.ID" name="ID" readonly />
+    <br />
+    <label>CourseName</label>
+    <br />
+    <input type="text" value="@Model.CourseName" name="CourseName" />
+    <br />
+    <label>CourseNumber</label>
+    <br />
+    <input type="text" value="@Model.CourseNumber" name="CourseNumber" />
+    <br />
+    <br />
+    <input type="submit" value="modify" />
+
+}

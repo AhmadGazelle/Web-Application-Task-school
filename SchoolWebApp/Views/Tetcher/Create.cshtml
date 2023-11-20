@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add New Tetcher</h2>
+
+
+
+@using (Html.BeginForm("Create", "Tetcher", FormMethod.Post))
+{
+    <label for="fname">TetcherName</label>
+    <br>
+    <input type="text" name="TetcherName">
+    <br>
+    <label for="lname">Major</label>
+    <br>
+    <input type="text" name="Major">
+    <br>
+    <br>
+    <input type="submit" value="Add new Tetcher">
+
+
+}
